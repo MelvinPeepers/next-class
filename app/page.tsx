@@ -95,5 +95,7 @@
 // }
 
 export default function Page() {
+  console.time("MyTIMER");
   return <h1>Hello, Next.js!</h1>;
+  console.timeEnd("MyTIMER");
 }
