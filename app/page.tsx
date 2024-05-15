@@ -94,8 +94,19 @@
 //   );
 // }
 
+// export default function Page() {
+//   return <h1>Hello, Next.js!</h1>;
+// }
+
+import { useEffect } from "react";
+
 export default function Page() {
-  console.time("MyTIMER");
+  useEffect(() => {
+    console.time("MYTIMER");
+
+    // End timing immediately as this is a simple render
+    console.timeEnd("MYTIMER");
+  }, []);
+
   return <h1>Hello, Next.js!</h1>;
-  console.timeEnd("MyTIMER");
 }
