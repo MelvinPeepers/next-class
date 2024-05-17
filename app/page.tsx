@@ -106,8 +106,9 @@ export default function Page() {
   useEffect(() => {
     console.time("MYTIMER");
 
-    // End timing immediately as this is a simple render
-    console.timeEnd("MYTIMER");
+    setTimeout(() => {
+      console.timeEnd("MYTIMER");
+    }, 500); // Adding a 500 ms delay
   }, []);
 
   return <h1>Hello, Next.js!</h1>;
